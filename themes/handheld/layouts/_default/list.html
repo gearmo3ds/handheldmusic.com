@@ -1,0 +1,60 @@
+{{ partial "header.html" . }}
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+<div class="row justify-content-center g-4">
+  {{ range .Data.Pages }}
+
+  <article class="col-12 col-md-6 col-xl-4">
+
+
+    <div class="card bg-dark border-secondary h-100 timeline-card">
+
+      <div class="row g-0" style="margin: 10px;">
+
+        {{ if .Params.youtube }}
+
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/{{ .Params.youtube }}" allowfullscreen>
+          </iframe>
+        </div>
+
+        {{ else }}
+
+        <!-- Thumbnail -->
+        <div class="col-md-4">
+          <img src="{{ .Params.thumbnail }}" class="img-fluid rounded-start" alt="{{ .Params.console }}" />
+        </div>
+
+        <!-- Text -->
+        <div class="col-md-4" style="margin-left: 20px;">
+
+          <!-- <div class="card-body"> -->
+          <h3>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h3>
+
+          <h5 class="card-title text-success">{{ .Params.console }}</h5>
+
+          <!-- <img src="{{ .Params.thumbnail }}"
+              class="img-fluid mb-3"
+              alt="{{ .Params.console }}" /> -->
+
+          <p class="card-text small text-body-secondary">
+            {{ .Params.summary }}
+          </p>
+          <!-- </div> -->
+        </div>
+        {{ end }}
+
+      </div>
+
+    </div>
+  </article>
+
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}

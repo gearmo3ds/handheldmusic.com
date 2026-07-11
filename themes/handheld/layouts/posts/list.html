@@ -1,0 +1,47 @@
+{{ partial "header.html" . }}
+
+{{ range.Data.Pages }}
+
+<div class="w-50 mx-auto my-4">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+
+    {{ if .Params.youtube }}
+
+    <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/{{ .Params.youtube }}" allowfullscreen>
+        </iframe>
+    </div>
+    {{ end }}
+
+    {{ .Summary }}
+
+    <div class="mt-3 small text-body-secondary">
+
+        {{ with .Params.creators }}
+        <div>
+            <strong>Creator:</strong>
+            {{ delimit . ", " }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.consoles }}
+        <div>
+            <strong>Console:</strong>
+            {{ delimit . ", " }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.apps }}
+        <div>
+            <strong>App:</strong>
+            {{ delimit . ", " }}
+        </div>
+        {{ end }}
+
+    </div>
+
+</div>
+
+{{ end }}
+
+{{ partial "footer.html" . }}

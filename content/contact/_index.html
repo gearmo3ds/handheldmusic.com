@@ -1,0 +1,110 @@
+        <style>
+            body {
+                background: #0b0b0c;
+                color: #fff;
+            }
+            .page-top-spacer {
+                height: 5rem;
+            }
+            .form-card {
+                background: #0b0b0c;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 0.5rem;
+                padding: 2rem;
+            }
+            .form-control,
+            .form-select {
+                background-color: #1a1a1b;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                color: #fff;
+            }
+            .form-control:focus,
+            .form-select:focus {
+                background-color: #1a1a1b;
+                border-color: #198754;
+                color: #fff;
+                box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+            }
+            .btn-success {
+                background-color: #198754;
+                border-color: #198754;
+            }
+            .btn-success:hover {
+                background-color: #157347;
+            }
+            .navbar {
+                background: linear-gradient(90deg, #007a3d, #00b75f);
+                box-shadow: 0 2px 25px rgba(0, 255, 128, 0.25);
+                transition: all 0.3s ease;
+            }
+        </style>
+
+
+        <div class="page-top-spacer"></div>
+
+        <main class="container col-xxl-8 px-4 py-5">
+            <!-- HERO -->
+            <header class="row hero align-items-center g-4 mb-4">
+                <div class="col-md-8">
+                    <h1 class="display-6 fw-bold">Contact</h1>
+                    <p class="lead text-body-secondary">
+                        Have a question, suggestion, or collaboration idea? Reach out below!
+                    </p>
+                </div>
+            </header>
+
+            <!-- CONTACT FORM -->
+            <section>
+                <div class="form-card shadow-sm">
+                    <form action="https://formspree.io/f/your-form-id" method="POST">
+                        <!-- Replace with your Formspree ID -->
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-semibold">Your Name</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                name="name"
+                                placeholder="John Doe"
+                                required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">Email Address</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="_replyto"
+                                placeholder="you@example.com"
+                                required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label fw-semibold">Subject</label>
+                            <select class="form-select" id="subject" name="subject" required>
+                                <option value="">Choose one...</option>
+                                <option>General Question</option>
+                                <option>Content Suggestion</option>
+                                <option>Bug Report</option>
+                                <option>Collaboration / Press</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-semibold">Message</label>
+                            <textarea
+                                class="form-control"
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Type your message here..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success btn-lg mt-2">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>

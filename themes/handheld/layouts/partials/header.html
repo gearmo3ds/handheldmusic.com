@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous" />
+        <link rel="icon" type="image/png" href="images/sound.png" />
+        <style>
+            .timeline-card img {
+                height: 130px;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 0.5rem;
+            }
+            .timeline-card {
+                height: 100%;
+            }
+            .timeline-card img {
+                height: 150px;
+                object-fit: cover;
+                filter: brightness(90%);
+                transition:
+                    transform 0.3s ease,
+                    filter 0.3s ease;
+            }
+            .timeline-card img:hover {
+                transform: scale(1.05);
+                filter: brightness(100%);
+            }
+            .navbar {
+                background: linear-gradient(90deg, #007a3d, #00b75f);
+                box-shadow: 0 2px 25px rgba(0, 255, 128, 0.25);
+                transition: all 0.3s ease;
+            }
+      body {
+        background: #0b0b0c;
+        color: #fff;
+      }
+
+      .app-image {
+        height: 240px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        filter: brightness(0.92);
+        transition:
+          transform 0.25s ease,
+          filter 0.25s ease;
+      }
+      .app-image:hover {
+        transform: scale(1.03);
+        filter: brightness(1);
+      }
+      .big {
+        font-size: 1.05rem;
+        line-height: 1.5;
+      }
+      .app-card {
+        background: #0b0b0c;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .page-top-spacer {
+        height: 5rem;
+      }
+      .navbar {
+        background: linear-gradient(90deg, #007a3d, #00b75f);
+        box-shadow: 0 2px 25px rgba(0, 255, 128, 0.25);
+        transition: all 0.3s ease;
+      }
+        </style>
+
+
+
+</head>
+
+<body data-bs-theme="dark" class="bg-dark text-white">
+
+{{ partial "nav.html" . }}
+
+<main class="content">

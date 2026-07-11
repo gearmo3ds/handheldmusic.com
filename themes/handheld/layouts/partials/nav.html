@@ -1,0 +1,25 @@
+<header class="site-header">
+  <nav class="site-nav navbar navbar-expand-lg bg-success navbar-dark fixed-top p-3">
+
+    <a class="navbar-brand" href="{{ .Site.BaseURL }}">handheldmusic.com</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {{ range.Site.Menus.main }}
+        <li>
+          <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+
+      </ul>
+    </div>
+
+  </nav>
+</header>
+<br />
+<br />
+<br />

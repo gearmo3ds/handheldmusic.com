@@ -1,0 +1,59 @@
+baseURL = 'https://gearmo3ds.github.io/'
+locale = 'en-us'
+title = 'Handheld Music'
+theme = 'handheld'
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  creator = 'creators'
+  console = 'consoles'
+  app = 'apps'
+
+[pagination]
+  disableAliases = false
+  pagerSize = 3
+  path = 'page'
+
+[params]
+  recent_posts_number = 3
+
+[params.ananke]
+  show_recent_posts = true
+
+[security]
+  allowContent = ['^text/html$', '^text/plain$',  '^text/markdown$']
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Videos"
+    url = "/posts"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 50
+
+  [[menu.main]]
+    identifier = "consoles"
+    name = "Consoles"
+    url = "/consoles"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "apps"
+    name = "Apps"
+    url = "/apps"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "creators"
+    name = "Creators"
+    url = "/creators"
+    weight = 40
